@@ -13,6 +13,10 @@ public class Customer {
         name = new MyName(firstName, lastName);
     }
 
+    public void addAnOrder(Order chosenOrder){
+        receipt.add(chosenOrder);
+    }
+
     public void showReceipt(){
         double total = 0;
         System.out.println(name);

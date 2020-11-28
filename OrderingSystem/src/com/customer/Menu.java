@@ -16,10 +16,20 @@ public class Menu {
         bevList.add(new Beverage("Popsi", 10, bevList.size()+1));
         bevList.add(new Beverage("Pupsi", 10, bevList.size()+1));
     }
+
+//    public Menu(Meal meal)
+
     public void display(){
         System.out.println(this);
     }
 
+    public int mealListSize(){
+        return mealList.size();
+    }
+
+    public int bevListSize(){
+        return bevList.size();
+    }
 
     public Order getMeal(int choice, int q){
         return new Order(mealList.get(choice), q);

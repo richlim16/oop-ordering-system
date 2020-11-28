@@ -5,7 +5,6 @@ public class Food {
     private double price;
     private int ID;
 
-
     public Food(){}
     public Food(String name){
     this.name = name;

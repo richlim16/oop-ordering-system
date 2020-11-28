@@ -22,6 +22,7 @@ public class Order {
     public double getPrice(){
         return price;
     }
+
     public void display(){
         System.out.println(this);
     }
