@@ -30,9 +30,9 @@ public class Order {
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
-        sb.append(String.format("Name: %s", item.getName()));
-        sb.append(String.format(" Quantity: %d", quantity));
-        sb.append(String.format(" Price: %.2f", price));
+        sb.append(String.format("%s", item));
+        sb.append(String.format(" Quantity: %3d", quantity));
+        sb.append(String.format(" Total Price: %5.2f", price));
 
         return sb.toString();
     }

@@ -50,9 +50,9 @@ public class Food {
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
-        sb.append(String.format("ID: %d ", ID));
-        sb.append(String.format("Name: %-10s", name));
-        sb.append(String.format(" Price: %.2f", price));
+        sb.append(String.format("ID: %-3d ", ID));
+        sb.append(String.format("Name: %-15s", name));
+        sb.append(String.format(" Price: %5.2f", price));
 
         return sb.toString();
     }
