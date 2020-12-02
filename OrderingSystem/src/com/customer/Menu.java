@@ -11,6 +11,12 @@ public class Menu {
         mealList.add(new Meal("Peanuts", 20.00, mealList.size()+1));
         mealList.add(new Meal("NutsNotPea", 20.00, mealList.size()+1));
         mealList.add(new Meal("Poopnuts", 25.00, mealList.size()+1));
+        mealList.add(new Meal("Poopnuts1", 25.00, mealList.size()+1));
+        mealList.add(new Meal("Poopnuts2", 25.00, mealList.size()+1));
+        mealList.add(new Meal("Poopnuts3", 25.00, mealList.size()+1));
+        mealList.add(new Meal("Poopnuts4", 25.00, mealList.size()+1));
+        mealList.add(new Meal("Poopnuts5", 25.00, mealList.size()+1));
+        mealList.add(new Meal("Poopnuts6", 25.00, mealList.size()+1));
 
         bevList.add(new Beverage("Pipsi", 10, bevList.size()+1));
         bevList.add(new Beverage("Popsi", 10, bevList.size()+1));
@@ -29,6 +35,14 @@ public class Menu {
 
     public int bevListSize(){
         return bevList.size();
+    }
+
+    public String getMealName(int i){
+        return mealList.get(i).getName();
+    }
+
+    public String getBevName(int i){
+        return bevList.get(i).getName();
     }
 
     public Order getMeal(int choice, int q){
