@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Customer {
+public class Customer implements ActionListener{
     //fields for receipt and menu
     private MyName name;
     private ArrayList<Order> receipt = new ArrayList<Order>();
@@ -17,6 +18,8 @@ public class Customer {
     private JButton bevButtons[] = new JButton[menu.bevListSize()];
     private int x = 0;
     private int y = 0;
+
+    private JTextField tf;
 
     //constructors
     public Customer(){}
@@ -38,46 +41,6 @@ public class Customer {
         }
 
         System.out.println("Total: Php "+total);
-    }
-    public void makeOrder(){
-        int choice = 1, quantity = 1;
-        Scanner scanboi = new Scanner(System.in);
- 9i
-        do{
-            System.out.println("Welcome To JRA Restobar!\n\nWhat would you like to order today?");
-            System.out.println(menu);
-            System.out.println("1. Meal\n2. Beverage \n0.Show Receipt\nChoice:" );
-            choice = scanboi.nextInt();
-            switch(choice){
-                case 1:
-                     System.out.printf("Input Meal ID: ");
-                     choice = scanboi.nextInt();
-                     System.out.printf("\nHow many orders would you like?: ");
-                     quantity = scanboi.nextInt();
-                     if(choice >= menu.mealListSize()){
-                         System.out.println("Sorry that is an invalid input!");
-                     }else{
-                         addAnOrder(menu.getMeal(choice-1, quantity));//-1 because 0 == show receipt, so id starts at 1 but is index 0 in array
-                     }
-                     break;
-                case 2:
-                    System.out.printf("Input Beverage ID: ");
-                    choice = scanboi.nextInt();
-                    System.out.printf("\nHow many orders would you like?: ");
-                    quantity = scanboi.nextInt();
-                    if(choice >= menu.bevListSize()){
-
-                        System.out.println("Sorry that is an invalid input!");
-                    }else{
-                        addAnOrder(menu.getBev(choice-1, quantity));//-1 because 0 == show receipt, so id starts at 1 but is index 0 in array
-                    }
-                    break;
-                default:
-                    System.out.println("Sorry that is an invalid input!\n");
-            }
-        }while(choice != 0);
-
-        showReceipt();
     }
 
     public void makeFrame(){
@@ -113,6 +76,7 @@ public class Customer {
         for(int i = 0; i < menu.bevListSize(); i++){
             bevButtons[i] = new JButton(menu.getBevName(i));
             bevButtons[i].setBounds(x, y, w, h);
+            bevButtons[i].addActionListener(this);
             x+=w;
             if(i > 0 && i % 4 == 0){
                 i = 0;
@@ -121,7 +85,15 @@ public class Customer {
             }
             frame.add(bevButtons[i]);
         }
+
+        tf = new JTextField("vagina");
+        tf.setBounds(0, y+h, 50, 20);
+        tf.setEditable(false);
+        frame.add(tf);
         frame.setVisible(true);
 
+    }
+    public void actionPerformed(ActionEvent e){
+        tf.setText("penis");
     }
 }
