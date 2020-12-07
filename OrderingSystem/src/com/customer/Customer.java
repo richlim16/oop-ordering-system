@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Customer implements ActionListener{
+public class Customer{
     //fields for receipt and menu
     private MyName name;
     private ArrayList<Order> receipt = new ArrayList<Order>();
@@ -19,8 +19,7 @@ public class Customer implements ActionListener{
     private int x = 0;
     private int y = 0;
 
-    private JTextField tf;
-
+    JPanel rPanel;
     //constructors
     public Customer(){}
 
@@ -46,54 +45,33 @@ public class Customer implements ActionListener{
     public void makeFrame(){
         frame = new JFrame("Customer Menu");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(null);
-        frame.setSize(500, 750);
+        JPanel mPanel = new JPanel();//panel where we place our meal buttons
+        JPanel bPanel = new JPanel();//panel where we place our beverage buttons
+        rPanel = new JPanel();
 
-        //adding meal buttons
-        JLabel mealLabel = new JLabel("Meals");
-        mealLabel.setBounds(x, y, 50, 25);
-        int h = 100;
-        int w = 100;
-        frame.add(mealLabel);
-        y += 30; //update x & y to lower the next set of buttons
-        for(int i = 0; i < menu.mealListSize(); i++){
-            mealButtons[i] = new JButton(menu.getMealName(i));
-            mealButtons[i].setBounds(x, y, w, h);
-            x+=w;
-            if(i > 0 && i % 4 == 0){
-                x = 0;
-                y+=h;
-            }
-            frame.add(mealButtons[i]);
-        }
-        y+=h;
-        x = 0;
-        //adding beverage buttons
-        JLabel bevLabel = new JLabel("Beverages");
-        bevLabel.setBounds(x, y, 75, 25);
-        frame.add(bevLabel);
-        y+= 30;
-        for(int i = 0; i < menu.bevListSize(); i++){
-            bevButtons[i] = new JButton(menu.getBevName(i));
-            bevButtons[i].setBounds(x, y, w, h);
-            bevButtons[i].addActionListener(this);
-            x+=w;
-            if(i > 0 && i % 4 == 0){
-                i = 0;
-                x = 0;
-                y+=h;
-            }
-            frame.add(bevButtons[i]);
-        }
+        GridLayout grid = new GridLayout(0, 5);
+        mPanel.setLayout(grid);
+        bPanel.setLayout(grid);
 
-        tf = new JTextField("vagina");
-        tf.setBounds(0, y+h, 50, 20);
-        tf.setEditable(false);
-        frame.add(tf);
+        rPanel.setLayout(new BoxLayout(rPanel, BoxLayout.Y_AXIS));
+
+        for(int x = 0; x < menu.mealListSize(); x++){
+            JButton m = new JButton(menu.getMealName(x));
+            m.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent e) {
+                    String name = e.getActionCommand();
+                    System.out.println(name);
+                    JTextField jtf = new JTextField(name);
+                    rPanel.add(jtf);
+                    frame.pack();
+                }
+            });
+            mPanel.add(m);
+            frame.add(mPanel);
+            frame.add(rPanel);
+            frame.pack();
+        }
         frame.setVisible(true);
+    }
 
-    }
-    public void actionPerformed(ActionEvent e){
-        tf.setText("penis");
-    }
 }
