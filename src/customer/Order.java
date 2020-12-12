@@ -1,6 +1,6 @@
 package customer;
 
-import com.food.*;
+import food.*;
 
 public class Order {
     private Food item;
@@ -19,6 +19,16 @@ public class Order {
         price = item.getPrice() * quantity;
     }
 
+//    public void addQuantity(){    MIGHT BE USED IN THE FUTURE
+//        this.quantity += 1;
+//    }
+//    
+//    public void minusQuantity(){  MIGHT BE USED IN THE FUTURE
+//        if(this.quantity != 0){
+//            this.quantity -= 1;
+//        }
+//    }
+    
     public double getPrice(){
         return price;
     }

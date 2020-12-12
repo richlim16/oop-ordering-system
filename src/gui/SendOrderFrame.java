@@ -5,6 +5,7 @@
  */
 
 package gui;
+import customer.*;
 
 /**
  *
@@ -12,6 +13,8 @@ package gui;
  */
 public class SendOrderFrame extends javax.swing.JFrame {
 
+    Order order = new Order();
+    
     /** Creates new form SendOrderFrame */
     public SendOrderFrame() {
         initComponents();
@@ -48,9 +51,19 @@ public class SendOrderFrame extends javax.swing.JFrame {
         jLabel3.setText("Quantity");
 
         jButton1.setText("+");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("-");
         jButton2.setToolTipText("");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -129,7 +142,18 @@ public class SendOrderFrame extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+//        order.addQuantity();  MIGHT BE USED IN THE FUTURE
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+//        order.minusQuantity();  MIGHT BE USED IN THE FUTURE
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
