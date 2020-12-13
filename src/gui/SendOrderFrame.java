@@ -6,17 +6,24 @@
 
 package gui;
 import customer.*;
+import food.*;
 
 /**
  *
  * @author Rich Tristan Lim
  */
 public class SendOrderFrame extends javax.swing.JFrame {
-
-    Order order = new Order();
-    
+    private String name;
+    private String price;
+    private int quantity = 1;
     /** Creates new form SendOrderFrame */
     public SendOrderFrame() {
+        initComponents();
+    }
+    
+    public SendOrderFrame(Food f){
+        name = f.getName();
+        price = Double.toString(f.getPrice());
         initComponents();
     }
 
@@ -42,7 +49,7 @@ public class SendOrderFrame extends javax.swing.JFrame {
         setTitle("SendOrderFrame");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Meal Name");
+        jLabel1.setText(name);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Php ---");
@@ -90,7 +97,7 @@ public class SendOrderFrame extends javax.swing.JFrame {
         );
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setText("Php ---");
+        jLabel4.setText(price);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("Submit Order");
@@ -105,7 +112,7 @@ public class SendOrderFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()

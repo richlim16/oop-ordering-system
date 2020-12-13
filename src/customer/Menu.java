@@ -43,12 +43,12 @@ public class Menu {
         return bevList.get(i).getName();
     }
 
-    public Order getMeal(int choice, int q){
-        return new Order(mealList.get(choice), q);
+    public Food getMeal(int choice){
+        return mealList.get(choice);
     }
 
-    public Order getBev(int choice, int q){
-        return new Order(bevList.get(choice), q);
+    public Food getBev(int choice){
+        return bevList.get(choice);
     }
 
     @Override

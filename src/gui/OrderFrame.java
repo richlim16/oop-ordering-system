@@ -68,14 +68,14 @@ public class OrderFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText(menu.getMealName(2));
+        jButton3.setText(menu.getMealName(6));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setText(menu.getMealName(3)
+        jButton4.setText(menu.getMealName(2)
         );
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,21 +83,21 @@ public class OrderFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText(menu.getMealName(4));
+        jButton5.setText(menu.getMealName(3));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
-        jButton6.setText(menu.getMealName(5));
+        jButton6.setText(menu.getMealName(4));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
 
-        jButton7.setText(menu.getMealName(6));
+        jButton7.setText(menu.getMealName(5));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -226,44 +226,44 @@ public class OrderFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getMeal(0)).setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       new SendOrderFrame().setVisible(true);
+       new SendOrderFrame(menu.getMeal(1)).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getMeal(2)).setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getMeal(3)).setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getMeal(4)).setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getMeal(5)).setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getMeal(6)).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getBev(0)).setVisible(true);
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getBev(1)).setVisible(true);
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        new SendOrderFrame().setVisible(true);
+        new SendOrderFrame(menu.getBev(2)).setVisible(true);
     }//GEN-LAST:event_jButton23ActionPerformed
 
     
