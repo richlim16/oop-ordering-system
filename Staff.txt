@@ -6,3 +6,5 @@ array of requests for food [{table number, order}] ->once a food order is qccept
 
 
 per table [orders]
+
+make a transaction abstract jbutton class for bilout and callawaiter to implement
