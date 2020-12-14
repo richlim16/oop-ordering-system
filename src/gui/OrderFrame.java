@@ -15,10 +15,16 @@ public class OrderFrame extends javax.swing.JFrame {
     Menu menu = new Menu();
     Order order = new Order();
     Food food = new Food();
+    String customerName;
     /**
      * Creates new form OrderFrame
      */
     public OrderFrame() {
+        initComponents();
+    }
+    
+    public OrderFrame(String customerName){
+        this.customerName = customerName;
         initComponents();
     }
 

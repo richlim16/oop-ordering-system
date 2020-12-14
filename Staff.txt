@@ -1,0 +1,8 @@
+change customer name to table number
+
+staff side---
+array of requests for waiter /  bill [{table number, string("waiter / bill")}
+array of requests for food [{table number, order}] ->once a food order is qccepted, it gets removed from the queue/array and moves into table receipt array/stack
+
+
+per table [orders]
