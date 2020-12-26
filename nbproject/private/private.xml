@@ -3,7 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Rich%20Tristan%20Lim/Desktop/oop-ordering-system/src/gui/OrderFrame.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/customer/Menu.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/gui/OrderFrame.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/customer/Customer.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/gui/Login.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/gui/SendOrderFrame.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/staff/Staff.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/customer/Order.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/food/Food.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/usc/Main.java</file>
+            <file>file:/C:/Users/Carlos%20Chiongbian/Desktop/oop-ordering-system/src/gui/BillOutFrame.java</file>
         </group>
     </open-files>
 </project-private>

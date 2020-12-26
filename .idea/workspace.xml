@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="729ec22e-58b5-48b3-bb0b-c75b3e4fd71d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/classes/customer/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/customer/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/Login$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/Login$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/Login$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/Login$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/OrderFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/OrderFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/gui/SendOrderFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/OrderFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OrderFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/OrderFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OrderFrame.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1le280qpWHklN016galHfT3BH2B" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="729ec22e-58b5-48b3-bb0b-c75b3e4fd71d" name="Default Changelist" comment="" />
+      <created>1607943085338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607943085338</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -6,12 +6,20 @@
 package usc;
 
 import gui.*;
+import customer.*;
+import java.io.*;
+import java.net.*;
 /**
  *
  * @author Rich Tristan Lim
  */
 public class Main {
-    public static void main(String[] args) {
-//        new Login().setVisible(true);
+    
+    public Customer cust;
+  
+    public static void main(String[] args){
+        new Login().setVisible(true);  
     }
+    
+       
 }
