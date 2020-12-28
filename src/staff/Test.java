@@ -4,17 +4,17 @@
  * and open the template in the editor.
  */
 package staff;
-import customer.*;
-import java.util.ArrayList;
 
 /**
  *
- * @author Carlos Chiongbian
+ * @author Rich Tristan Lim
  */
-public class Receipt {
-    
-    private ArrayList<Menu> receipt = new ArrayList<Menu>();
+public class Test {
 
-    
-    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        new ChatServer(3000);
+    }
 }
