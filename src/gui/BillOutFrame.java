@@ -9,13 +9,19 @@ package gui;
  *
  * @author Rich Tristan Lim
  */
-public class BillOutFrame extends javax.swing.JFrame {
+public class BillOutFrame extends javax.swing.JFrame implements Transaction{
 
     /**
      * Creates new form BillOutFrame
      */
-    public BillOutFrame() {
+    private String table;
+    public BillOutFrame(String table) {
+        this.table = table;
         initComponents();
+    }
+
+    private BillOutFrame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -93,7 +99,9 @@ public class BillOutFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    dispose();        // TODO add your handling code here:
+        String msg = table+" wants to bill out.";
+        send(msg);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -137,4 +145,9 @@ public class BillOutFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void send(String msg) {
+       ChatClient c = new ChatClient("localhost", 3000, msg);
+    }
 }

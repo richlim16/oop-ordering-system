@@ -13,8 +13,9 @@ import staff.*;
  *
  * @author Rich Tristan Lim
  */
-public class SendOrderFrame extends javax.swing.JFrame {
+public class SendOrderFrame extends javax.swing.JFrame implements Transaction{
     private String name;
+    private String foodName;
     private double price;
     private int quantity = 1;
     private double total;
@@ -25,9 +26,11 @@ public class SendOrderFrame extends javax.swing.JFrame {
         initComponents();
     }
     
-    public SendOrderFrame(Food f){
-        name = f.getName();
-        this.price = f.getPrice();
+    public SendOrderFrame(String table, Food f){
+        name = table;
+        foodName = f.getName();
+        price = f.getPrice();
+        total = price;
         initComponents();
     }
 
@@ -43,9 +46,9 @@ public class SendOrderFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         incrementButton = new javax.swing.JButton();
         decrementButton = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         submitOrderButton = new javax.swing.JButton();
         phpTotal = new javax.swing.JTextField();
@@ -54,13 +57,10 @@ public class SendOrderFrame extends javax.swing.JFrame {
         setTitle("SendOrderFrame");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText(name);
+        jLabel1.setText(foodName);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Php");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Quantity");
 
         incrementButton.setText("+");
         incrementButton.addActionListener(new java.awt.event.ActionListener() {
@@ -77,6 +77,14 @@ public class SendOrderFrame extends javax.swing.JFrame {
             }
         });
 
+        jTextField1.setEditable(false);
+        jTextField1.setText(String.valueOf(quantity));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -84,20 +92,20 @@ public class SendOrderFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(decrementButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(incrementButton)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
                     .addComponent(incrementButton)
-                    .addComponent(decrementButton))
+                    .addComponent(decrementButton)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -114,6 +122,7 @@ public class SendOrderFrame extends javax.swing.JFrame {
         });
 
         phpTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        phpTotal.setText(Double.toString(total));
         phpTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 phpTotalActionPerformed(evt);
@@ -169,20 +178,24 @@ public class SendOrderFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitOrderButtonActionPerformed
-        // TODO add your handling code here:
-        
+        String msg = name+" wants "+String.valueOf(quantity)+ " " +foodName+".";
+        send(msg);
         dispose();
     }//GEN-LAST:event_submitOrderButtonActionPerformed
 
     private void incrementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incrementButtonActionPerformed
-        // TODO add your handling code here:
-        calcPrice(incQuantity());
+        quantity++;
+        jTextField1.setText(String.valueOf(quantity));
+        total = price*quantity;
+        phpTotal.setText(Double.toString(total));
         phpTotal.setText(Double.toString(total));
     }//GEN-LAST:event_incrementButtonActionPerformed
 
     private void decrementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decrementButtonActionPerformed
-        // TODO add your handling code here:
-        calcPrice(decQuantity());
+        quantity--;
+        jTextField1.setText(String.valueOf(quantity));
+        total = price*quantity;
+        phpTotal.setText(Double.toString(total));
         phpTotal.setText(Double.toString(total));
     }//GEN-LAST:event_decrementButtonActionPerformed
 
@@ -190,17 +203,10 @@ public class SendOrderFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_phpTotalActionPerformed
 
-    public int incQuantity(){  //when user clicks + button
-        this.quantity++;
-        return this.quantity;
-    }
-    
-    public int decQuantity(){  //when user clicks - button
-        if(this.quantity > 1){
-            this.quantity--;
-        }
-        return this.quantity;
-    } 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     
     public void calcPrice(int num){
         this.total = num * this.price;
@@ -246,11 +252,16 @@ public class SendOrderFrame extends javax.swing.JFrame {
     private javax.swing.JButton incrementButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField phpTotal;
     private javax.swing.JButton submitOrderButton;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void send(String msg) {
+        ChatClient c = new ChatClient("localhost", 3000, msg);
+    }
 
 }

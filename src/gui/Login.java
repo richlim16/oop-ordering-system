@@ -92,19 +92,22 @@ public class Login extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         setTableNumber(1);
-        new OrderFrame(1).setVisible(true);
+        new OrderFrame("Table 1").setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         setTableNumber(2);
-        new OrderFrame(2).setVisible(true);
+        new OrderFrame("Table 2").setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setTableNumber(3);
-        new OrderFrame(3).setVisible(true);
+        new OrderFrame("Table 3").setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public void setTableNumber(int num){

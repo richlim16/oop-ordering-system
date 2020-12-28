@@ -16,7 +16,7 @@ public class OrderFrame extends javax.swing.JFrame {
     Menu menu = new Menu();
     Order order = new Order();
     Food food = new Food();
-    String customerName;    //is there still a need for this var?
+    String table;
     int tableNumber;
     /**
      * Creates new form OrderFrame
@@ -25,13 +25,8 @@ public class OrderFrame extends javax.swing.JFrame {
         initComponents();
     }
     
-    public OrderFrame(int num){
-        this.tableNumber = num;
-        initComponents();
-    }
-    
-    public OrderFrame(String customerName){
-        this.customerName = customerName;
+    public OrderFrame(String table){
+        this.table = table;
         initComponents();
     }
 
@@ -275,55 +270,53 @@ public class OrderFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new SendOrderFrame(menu.getMeal(0)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(0)).setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       new SendOrderFrame(menu.getMeal(1)).setVisible(true);
+       new SendOrderFrame( table, menu.getMeal(1)).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        new SendOrderFrame(menu.getMeal(2)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(2)).setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        new SendOrderFrame(menu.getMeal(3)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(3)).setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        new SendOrderFrame(menu.getMeal(4)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(4)).setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        new SendOrderFrame(menu.getMeal(5)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(5)).setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        new SendOrderFrame(menu.getMeal(6)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(6)).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        new SendOrderFrame(menu.getBev(0)).setVisible(true);
+        new SendOrderFrame(table, menu.getBev(0)).setVisible(true);
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        new SendOrderFrame(menu.getBev(1)).setVisible(true);
+        new SendOrderFrame(table, menu.getBev(1)).setVisible(true);
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        new SendOrderFrame(menu.getBev(2)).setVisible(true);
+        new SendOrderFrame(table, menu.getBev(2)).setVisible(true);
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-        new WaiterFrame().setVisible(true);
+        
+        new WaiterFrame(table).setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-//        new BillOutFrame().setVisible(true);
-        new Staff().setVisible(true);
+         new BillOutFrame(table).setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     

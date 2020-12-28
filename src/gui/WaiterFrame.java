@@ -9,12 +9,14 @@ package gui;
  *
  * @author Rich Tristan Lim
  */
-public class WaiterFrame extends javax.swing.JFrame {
+public class WaiterFrame extends javax.swing.JFrame implements Transaction{
 
-    /**
-     * Creates new form WaiterFrame
-     */
+    private String table;
     public WaiterFrame() {
+        initComponents();
+    }
+    public WaiterFrame(String table){
+        this.table = table;
         initComponents();
     }
 
@@ -95,7 +97,9 @@ public class WaiterFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        dispose();// TODO add your handling code here:
+        String msg = table+" wants a waiter.";
+        send(msg);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -139,4 +143,9 @@ public class WaiterFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void send(String msg) {
+        ChatClient c = new ChatClient("localhost", 3000, msg);
+    }
 }
