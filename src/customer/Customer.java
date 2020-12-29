@@ -12,7 +12,6 @@ public class Customer{
     private MyName name;
     private Login tableNumber;
     private ArrayList<Order> receipt = new ArrayList<Order>();
-    private static Menu menu = new Menu();
 
     //constructors
     public Customer(){}
@@ -40,5 +39,17 @@ public class Customer{
             total += x.getPrice();
         }
         System.out.println("Total: Php "+total);
+    }
+    public String printReceipt(){
+        StringBuilder sb = new StringBuilder();
+        double total = 0, tempPrice = 0;
+        for(Order x : receipt){
+            tempPrice = x.getPrice()*x.getQuantity();
+            sb.append(x.getName()+"\t Php "+tempPrice+"\n");
+            total+= tempPrice;
+        }
+        sb.append("Total Price: Php "+total);
+        
+        return sb.toString();
     }
 }

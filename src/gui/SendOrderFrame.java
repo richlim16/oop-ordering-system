@@ -19,6 +19,8 @@ public class SendOrderFrame extends javax.swing.JFrame implements Transaction{
     private double price;
     private int quantity = 1;
     private double total;
+    private Order order;
+    private Receipt r;
     
     
     /** Creates new form SendOrderFrame */
@@ -26,11 +28,13 @@ public class SendOrderFrame extends javax.swing.JFrame implements Transaction{
         initComponents();
     }
     
-    public SendOrderFrame(String table, Food f){
+    public SendOrderFrame(String table, Food f, Receipt receipt){
         name = table;
         foodName = f.getName();
         price = f.getPrice();
         total = price;
+        order = new Order(f);
+        r = receipt;
         initComponents();
     }
 
@@ -179,6 +183,8 @@ public class SendOrderFrame extends javax.swing.JFrame implements Transaction{
 
     private void submitOrderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitOrderButtonActionPerformed
         String msg = name+" wants "+String.valueOf(quantity)+ " " +foodName+".";
+        order.setQuantity(quantity);
+        r.addOrder(order);
         send(msg);
         dispose();
     }//GEN-LAST:event_submitOrderButtonActionPerformed

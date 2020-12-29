@@ -6,7 +6,6 @@
 package gui;
 
 import customer.*;
-import food.*;
 import staff.*;
 /**
  *
@@ -15,9 +14,8 @@ import staff.*;
 public class OrderFrame extends javax.swing.JFrame {
     Menu menu = new Menu();
     Order order = new Order();
-    Food food = new Food();
+    Receipt receipt = new Receipt();
     String table;
-    int tableNumber;
     /**
      * Creates new form OrderFrame
      */
@@ -57,6 +55,8 @@ public class OrderFrame extends javax.swing.JFrame {
         jButton23 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("OrderFrame");
@@ -229,6 +229,12 @@ public class OrderFrame extends javax.swing.JFrame {
             }
         });
 
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Your subTotal is:\\n" +receipt.print());
+        jScrollPane3.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -243,9 +249,12 @@ public class OrderFrame extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(86, 86, 86)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                .addGap(54, 54, 54)
+                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane3))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -263,51 +272,53 @@ public class OrderFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(340, 340, 340))
+                .addGap(36, 36, 36)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new SendOrderFrame( table, menu.getMeal(0)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(0), receipt).setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       new SendOrderFrame( table, menu.getMeal(1)).setVisible(true);
+       new SendOrderFrame( table, menu.getMeal(1), receipt).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        new SendOrderFrame( table, menu.getMeal(2)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(2), receipt).setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        new SendOrderFrame( table, menu.getMeal(3)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(3), receipt).setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        new SendOrderFrame( table, menu.getMeal(4)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(4), receipt).setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        new SendOrderFrame( table, menu.getMeal(5)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(5), receipt).setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        new SendOrderFrame( table, menu.getMeal(6)).setVisible(true);
+        new SendOrderFrame( table, menu.getMeal(6), receipt).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        new SendOrderFrame(table, menu.getBev(0)).setVisible(true);
+        new SendOrderFrame(table, menu.getBev(0), receipt).setVisible(true);
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        new SendOrderFrame(table, menu.getBev(1)).setVisible(true);
+        new SendOrderFrame(table, menu.getBev(1), receipt).setVisible(true);
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
-        new SendOrderFrame(table, menu.getBev(2)).setVisible(true);
+        new SendOrderFrame(table, menu.getBev(2), receipt).setVisible(true);
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -316,7 +327,7 @@ public class OrderFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-         new BillOutFrame(table).setVisible(true);
+         new BillOutFrame(table, receipt.print()).setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     
@@ -375,5 +386,7 @@ public class OrderFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

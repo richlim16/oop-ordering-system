@@ -18,16 +18,17 @@ public class Order {
         this.quantity = quantity;
         price = item.getPrice() * quantity;
     }
-
-//    public void addQuantity(){    MIGHT BE USED IN THE FUTURE
-//        this.quantity += 1;
-//    }
-//    
-//    public void minusQuantity(){  MIGHT BE USED IN THE FUTURE
-//        if(this.quantity != 0){
-//            this.quantity -= 1;
-//        }
-//    }
+    
+    public String getName(){
+        return item.getName();
+    }
+    public void setQuantity(int q){
+        quantity = q;
+        price = item.getPrice() * q;
+    }
+    public int getQuantity(){
+        return quantity;
+    }
     
     public double getPrice(){
         return price;
