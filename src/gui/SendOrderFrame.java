@@ -59,6 +59,7 @@ public class SendOrderFrame extends javax.swing.JFrame implements Transaction{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SendOrderFrame");
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText(foodName);

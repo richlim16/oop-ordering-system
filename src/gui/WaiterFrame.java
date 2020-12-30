@@ -36,6 +36,7 @@ public class WaiterFrame extends javax.swing.JFrame implements Transaction{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("WaiterFrame");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(184, 184));

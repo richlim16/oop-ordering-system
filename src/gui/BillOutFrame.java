@@ -38,6 +38,7 @@ public class BillOutFrame extends javax.swing.JFrame implements Transaction{
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N

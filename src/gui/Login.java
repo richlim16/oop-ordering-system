@@ -37,6 +37,7 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
+        setResizable(false);
 
         jButton2.setText("Table 3");
         jButton2.addActionListener(new java.awt.event.ActionListener() {

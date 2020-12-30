@@ -39,6 +39,7 @@ public class CheckReceipt extends javax.swing.JFrame {
         closeButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         receiptDisplay.setEditable(false);
         receiptDisplay.setColumns(20);
