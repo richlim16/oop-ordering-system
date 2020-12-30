@@ -9,16 +9,16 @@ public class Menu {
 
     public Menu(){
         mealList.add(new Meal("Peanuts", 20.00, mealList.size()+1));
-        mealList.add(new Meal("NutsNotPea", 20.00, mealList.size()+1));
+        mealList.add(new Meal("Lechon", 20.00, mealList.size()+1));
         mealList.add(new Meal("Chicken", 25.00, mealList.size()+1));
         mealList.add(new Meal("Siomai", 25.00, mealList.size()+1));
-        mealList.add(new Meal("Siomeow", 25.00, mealList.size()+1));
+        mealList.add(new Meal("Ramen", 25.00, mealList.size()+1));
         mealList.add(new Meal("Shabu", 25.00, mealList.size()+1));
         mealList.add(new Meal("ShabuShabu", 25.00, mealList.size()+1));
 
-        bevList.add(new Beverage("Pipsi", 10, bevList.size()+1));
-        bevList.add(new Beverage("Cooke", 10, bevList.size()+1));
-        bevList.add(new Beverage("Sarsea", 10, bevList.size()+1));
+        bevList.add(new Beverage("Pepsi", 10, bevList.size()+1));
+        bevList.add(new Beverage("Coke", 10, bevList.size()+1));
+        bevList.add(new Beverage("Sprite", 10, bevList.size()+1));
     }
 
 //    public Menu(Meal meal)
